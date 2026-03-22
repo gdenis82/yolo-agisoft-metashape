@@ -1,5 +1,7 @@
 # YOLO Object Detection for Agisoft Metashape
 
+This repository contains scripts and tools for using YOLO (You Only Look Once) object detection within Agisoft Metashape.
+
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
 ![NVIDIA](https://img.shields.io/badge/nVIDIA-%2376B900.svg?style=for-the-badge&logo=nVIDIA&logoColor=white)
