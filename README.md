@@ -21,27 +21,25 @@ This module integrates the YOLO (You Only Look Once) object detection framework 
 1. Detect objects on orthomosaic images using pre-trained or custom YOLO models
 2. Create YOLO-format datasets from Metashape data for training custom models
 
-The module is designed to work with Agisoft Metashape Professional 2.2.0 and above, using Python 3.9 and CUDA >= 11.8 for GPU acceleration.
-OR see your cuda version for torch and torchvision at https://pytorch.org/get-started/previous-versions/ for python 3.9
+The module is designed to work with Agisoft Metashape Professional 2.3.0 and above, using Python 3.12 and CUDA >= 12.8 for GPU acceleration.
+OR see your cuda version for torch and torchvision at https://pytorch.org/get-started/previous-versions/ for python 3.12
 
 ## Requirements
 
-- Agisoft Metashape Professional 2.2.0 or higher
-- Python 3.9
-- CUDA >= 11.8 (for GPU acceleration)
+- Agisoft Metashape Professional 2.3.0
+- Python 3.12
+- CUDA >= 12 (for GPU acceleration)
 - The following Python packages:
-  - numpy==2.0.2
-  - pandas==2.2.3
-  - opencv-python==4.11.0.86
+  - torch==2.7.0+cu128
+  - torchvision==0.22.0+cu128
+  - pytorch-lightning==2.6.1
+  - albumentations==2.0.8
+  - rasterio==1.4.3
   - shapely==2.0.7
-  - pathlib==1.0.1
-  - Rtree==1.3.0
-  - tqdm==4.67.1
+  - Rtree
+  - tqdm
   - ultralytics
-  - torch
-  - torchvision
   - scikit-learn==1.6.1
-  - albumentations==2.0.5
 
 
 ## 🚀 Installation
@@ -87,22 +85,16 @@ You can install the necessary Python packages automatically or manually. The aut
 **⁉️ What the Automatic Installer Does:**
 
    The script automatically installs the following pinned versions of key libraries:  
-   - `numpy==2.0.2`  
-   - `pandas==2.2.3`  
-   - `opencv-python==4.11.0.86`  
-   - `shapely==2.0.7`  
-   - `pathlib==1.0.1`  
-   - `Rtree==1.3.0`  
-   - `tqdm==4.67.1`  
-   - `ultralytics` (latest version)  
-   - `scikit-learn==1.6.1`  
-   - `albumentations==2.0.5`  
-
-   **Removes Default PyTorch Dependencies**  
-   After installing `ultralytics`, the script uninstalls the default `torch` and `torchvision` packages that were automatically pulled in as dependencies (which may not be CUDA-optimized or compatible with your system).
-
-   **Detects CUDA Version & Installs Optimized PyTorch**  
-   The installer runs `nvidia-smi` to detect your system’s CUDA driver version, then installs the *officially recommended* versions of `torch` and `torchvision` that match your CUDA environment—ensuring optimal performance and GPU support.
+  - torch==2.7.0+cu128
+  - torchvision==0.22.0+cu128
+  - pytorch-lightning==2.6.1
+  - albumentations==2.0.8
+  - rasterio==1.4.3
+  - shapely==2.0.7
+  - Rtree
+  - tqdm
+  - ultralytics
+  - scikit-learn==1.6.1 
 
 > ✅ **Result**: A clean, GPU-ready environment with version-controlled dependencies and CUDA-optimized PyTorch—no manual configuration needed.
 
@@ -117,19 +109,6 @@ The ultralytics package will automatically install torch and torchvision, but th
 
 Install the following packages using the pip command in the Metashape Python console:
 `python.exe -m pip install <package_name>`
-
-*   `numpy==2.0.2`
-*   `pandas==2.2.3`
-*   `opencv-python==4.11.0.86`
-*   `shapely==2.0.7`
-*   `pathlib==1.0.1`
-*   `Rtree==1.3.0`
-*   `tqdm==4.67.1`
-*   `ultralytics`
-*   `scikit-learn==1.6.1`
-*   `albumentations==2.0.5`
-*   `torch` (CUDA version specific, see [PyTorch previous versions](https://pytorch.org/get-started/previous-versions/))
-*   `torchvision` (CUDA version specific, see [PyTorch previous versions](https://pytorch.org/get-started/previous-versions/))
 
 > **Tip:** You can uninstall packages if needed with the command: `python.exe -m pip uninstall -y <package_name>`
 
