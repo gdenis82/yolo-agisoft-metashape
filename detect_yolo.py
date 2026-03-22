@@ -19,6 +19,8 @@ from ultralytics import YOLO
 from typing import List, Tuple, Union, Optional
 
 DEVICES = []
+print("sys.executable: ",sys.executable)
+print("python version: ",sys.version)
 
 if torch.backends.mps.is_available():
     device = "mps"
