@@ -21,8 +21,7 @@ This module integrates the YOLO (You Only Look Once) object detection framework 
 1. Detect objects on orthomosaic images using pre-trained or custom YOLO models
 2. Create YOLO-format datasets from Metashape data for training custom models
 
-The module is designed to work with Agisoft Metashape Professional 2.3.0 and above, using Python 3.12 and CUDA >= 12.8 for GPU acceleration.
-OR see your cuda version for torch and torchvision at https://pytorch.org/get-started/previous-versions/ for python 3.12
+The module is designed to work with Agisoft Metashape Professional 2.3.0 and above, using Python 3.12 and CUDA 12.8 for GPU acceleration.
 
 ## Requirements
 
