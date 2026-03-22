@@ -7,6 +7,7 @@
 #
 # ## How to install (Windows):
 # How to install external Python module to Metashape Professional package https://agisoft.freshdesk.com/support/solutions/articles/31000136860-how-to-install-external-python-module-to-metashape-professional-package
+
 if __name__ == "__main__":
 
 
