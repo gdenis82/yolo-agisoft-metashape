@@ -32,7 +32,6 @@ torch==2.7.0+cu128
 torchvision==0.22.0+cu128
 torchaudio==2.7.0+cu128
 
-deepforest==2.0.0
 pytorch-lightning==2.6.1
 albumentations==2.0.8
 
